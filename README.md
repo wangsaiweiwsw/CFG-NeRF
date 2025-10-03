@@ -33,8 +33,6 @@ Sparse-view NeRF reconstruction of ancient architecture faces three key problems
 
   - *Color branch*: Combines 16-band high-frequency coordinate encoding and 4-band view encoding, and integrates intermediate features from the density branch to enable *“joint geometry-appearance learning”*.
 
-    ![CFG-NeRF](2.png)
-
   (Corresponds to Fig. 3 in the paper, showing encoding logic for density/color branches and layer-wise injection flow)
 
 ### 3.2 Multi-scale Feature Pyramid (FP) Module
@@ -47,7 +45,6 @@ Sparse-view NeRF reconstruction of ancient architecture faces three key problems
   2. *Bilinear upsampling*: Unifies spatial dimensions of features across scales to ensure alignment;
   3. *Weighted fusion*: Fuses multi-scale features via preset weight vectors to enhance geometric feature expression.
 
-  ![image-20251003134226253](E:\TyporaPhoto\image-20251003134226253.png)
 
   (Corresponds to Fig. 4 in the paper, showing dynamic feature selection, bilinear upsampling, and weighted fusion)
 
@@ -61,7 +58,6 @@ Sparse-view NeRF reconstruction of ancient architecture faces three key problems
   2. *Multi-dimensional attention calculation*: Computes spatial and channel attention separately, then fuses them to generate pixel-level gating weights;
   3. *Cross-modal fusion*: Concatenates original features, augmented samples, and attention weights, then optimizes material features via grouped convolution.
 
-  ![image-20251003134246288](E:\TyporaPhoto\image-20251003134246288.png)
 
   (Corresponds to Fig. 5 in the paper, showing physical augmentation, attention weight calculation, and cross-modal fusion logic)
 
@@ -76,7 +72,6 @@ CFG-NeRF extends the *ZipNeRF* baseline, integrating three innovative modules to
   3. *Feature optimization*: FP optimizes geometric features; CGA optimizes color features;
   4. *Rendering output*: Concatenates optimized geometry and color features; predicts volume density and RGB color via a 3-layer MLP to complete reconstruction.
 
-  ![image-20251003134117779](E:\TyporaPhoto\image-20251003134117779.png)
 
   (Corresponds to Fig. 2 in the paper, showing the full pipeline from input to rendering, with module positions marked)
 
@@ -113,15 +108,12 @@ CFG-NeRF extends the *ZipNeRF* baseline, integrating three innovative modules to
 
 - Insert Image 1:
 
-  ![image-20251003134332065](E:\TyporaPhoto\image-20251003134332065.png)
-
-  ![image-20251003134353902](E:\TyporaPhoto\image-20251003134353902.png)
 
   (Corresponds to Fig. 6/7 in the paper, showing reconstruction comparisons of NeRF, mip-NeRF360, ZipNeRF, and CFG-NeRF; highlight enlarged views of details like bucket arches, plaques, stone carvings)
 
 - Insert Image 2:
 
-  ![image-20251003134416165](E:\TyporaPhoto\image-20251003134416165.png)
+
 
   (Corresponds to Fig. 8 in the paper, showing reconstruction comparisons of scale textures and light-shadow transitions for pinecones)
 
@@ -223,6 +215,7 @@ This work is supported by the **National Natural Science Foundation of China (Pr
 - Related work: Mildenhall B, et al. *NeRF: Representing scenes as neural radiance fields for view synthesis*[C]//ECCV 2020.
 
 - Baseline: Barron J T, et al. *Zip-NeRF: Combining scale-aware anti-aliasing and grid-based acceleration*[J]. arXiv:2305.12970, 2023.
+
 
 
 
