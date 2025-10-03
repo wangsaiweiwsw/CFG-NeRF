@@ -33,7 +33,7 @@ Sparse-view NeRF reconstruction of ancient architecture faces three key problems
 
   - *Color branch*: Combines 16-band high-frequency coordinate encoding and 4-band view encoding, and integrates intermediate features from the density branch to enable *“joint geometry-appearance learning”*.
 
-    ![image-20251003134155928](E:\TyporaPhoto\image-20251003134155928.png)
+    ![image-20251003134155928](./images/figure 3_01.png)
 
   (Corresponds to Fig. 3 in the paper, showing encoding logic for density/color branches and layer-wise injection flow)
 
@@ -221,4 +221,5 @@ This work is supported by the **National Natural Science Foundation of China (Pr
 
 - Original paper: Hua L, Wang S, Hu J, et al. *CFG-NeRF: Coordinate-Feature-Gate Collaborative Optimization for Sparse-View Ancient Architecture Reconstruction*[J]. (please insert full citation here)
 - Related work: Mildenhall B, et al. *NeRF: Representing scenes as neural radiance fields for view synthesis*[C]//ECCV 2020.
+
 - Baseline: Barron J T, et al. *Zip-NeRF: Combining scale-aware anti-aliasing and grid-based acceleration*[J]. arXiv:2305.12970, 2023.
